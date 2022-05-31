@@ -138,3 +138,7 @@ export {
   version,
   XfaLayer,
 };
+
+import { RefbookAppendixInit } from "./refbook.appendix.js";
+
+RefbookAppendixInit();
