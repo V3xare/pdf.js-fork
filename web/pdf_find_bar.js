@@ -88,6 +88,30 @@ class PDFFindBar {
     });
 
     this.eventBus._on("resize", this.#adjustWidth.bind(this));
+
+	//#Dirty fix for unresponsive buttons
+	this.highlightAll.nextElementSibling.addEventListener("click", ( e ) => {
+		e.stopPropagation();
+		e.preventDefault();		
+		this.highlightAll.click();
+	});
+	this.caseSensitive.nextElementSibling.addEventListener("click", ( e ) => {
+		e.stopPropagation();
+		e.preventDefault();
+		this.caseSensitive.click();
+	});	
+	this.entireWord.nextElementSibling.addEventListener("click", ( e ) => {
+		e.stopPropagation();
+		e.preventDefault();		
+		this.entireWord.click();
+	});	
+	this.matchDiacritics.nextElementSibling.addEventListener("click", ( e ) => {
+		e.stopPropagation();
+		e.preventDefault();	
+		this.matchDiacritics.click();
+	});
+	//^
+
   }
 
   reset() {
