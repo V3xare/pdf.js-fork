@@ -40,7 +40,7 @@ const Vinyl = require("vinyl");
 const vfs = require("vinyl-fs");
 const through = require("through2");
 
-const BUILD_DIR = "build/";
+const BUILD_DIR = "../pdfreader-8/build/";
 const L10N_DIR = "l10n/";
 const TEST_DIR = "test/";
 const EXTENSION_SRC_DIR = "extensions/";
