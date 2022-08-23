@@ -32,6 +32,9 @@ let PDFToolsIsReady = function(){
 
 	document.body.addEventListener( "keydown", function( e ){
 
+		if( e.target && e.target.nodeName == "INPUT" )
+			return;
+
 		console.log( e );
 
 		if( e.keyCode == 82 && !e.ctrlKey ){ //R - Rotations
