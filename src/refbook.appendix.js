@@ -3,12 +3,14 @@ let PDFToolsIsReady = function(){
 
 	let elems = {
 		print: document.getElementById( "print" ),
+		print2: document.getElementById( "secondaryPrint" ),
 		download: document.getElementById( "download" ),
+		download2: document.getElementById( "secondaryDownload" ),
 		select: document.getElementById( "cursorSelectTool" ),
 		hand: document.getElementById( "cursorHandTool" ),
 	};
 
-	if( !elems.print || !elems.download )
+	if( !elems.print || !elems.download || !elems.print2 || !elems.download2 )
 		return;
 
 	clearInterval( PDFToolsIsReadyInterval );
@@ -18,7 +20,9 @@ let PDFToolsIsReady = function(){
 
 	if( w.Access >= 5 ){
 		elems.print.classList.remove( "hidden" );	
-		elems.download.classList.remove( "hidden" );
+		elems.download.classList.remove( "hidden" );		
+		elems.print2.classList.remove( "hidden" );	
+		elems.download2.classList.remove( "hidden" );
 	};
 
 	if( elems.select && elems.hand ){
